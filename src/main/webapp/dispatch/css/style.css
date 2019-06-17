@@ -1,0 +1,139 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+.content{
+	width:100%;
+	height:50px;
+	border-bottom:solid 1px #ED8E46;
+	line-height:50px;
+	padding-left:20px;
+}
+
+.dispatch_wrap {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	height: 180px;
+	width: 100%;
+}
+
+.dispatch_wrap .top_div {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	height: 20%;
+	width: 100%;
+	background: #E1E1E1;
+}
+
+.top_div div:first-child {
+	margin-left: 12px;
+	margin-right: 12px;
+	font-size: 16px;
+	color: #353535;
+	font-weight: bold;
+}
+
+.top_div div:last-child {
+	-webkit-box-flex: 1.0;
+	text-align: right;
+	padding-right: 12px;
+	font-size: 14px;
+	color: #555555;
+}
+
+.dispatch_wrap .center_div {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	height: 55%;
+	width: 100%;
+	background: #FDFBF3;
+}
+
+.center_div .center_div_left {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	width: 40%;
+	height: 100%;
+}
+
+.center_div .center_div_center {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	width: 1px;
+	height: 70%;
+	margin-left: 20px;
+	background: #E1E1E1;
+}
+
+.center_div .center_div_right {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	width: 52.8%;
+	height: 100%;
+	font-size: 14px;
+	color: #353535;
+}
+
+.center_div_right div {
+	padding-left: 18px;
+}
+
+.center_div_left img {
+	display: block;
+	margin-left: 10px;
+	width: 40%;
+	height: 70%;
+	border: 1px dashed #E1E1E1;
+}
+
+.dispatch_wrap .bottom_div {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: end;
+	height: 25%;
+	width: 100%;
+	background: #FDFBF3;
+}
+
+.bottom_div div:first-child {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: end;
+	width: 60%;
+	height: 68%;
+}
+
+.bottom_div div:first-child select {
+	outline: none;
+	border: none;
+	width: 100px;
+	height: 100%;
+	display: block;
+	text-align: center;
+	margin-right: 15px;
+	background: #D3C294;
+	color: #FDFBF3;
+	font-size: 14px;
+	border-radius: 5px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.bottom_div div:last-child {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	width: 100px;
+	height: 68%;
+	background: #ED8E46;
+	margin-right: 12px;
+	color: #FDFBF3;
+	border-radius: 5px;
+}

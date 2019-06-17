@@ -1,0 +1,84 @@
+html {
+	font-size: 125%; /* 20梅16=125% min-font-size:12px bug*/
+}
+@media only screen and (min-width: 481px) {
+html {
+	font-size: 188%!important; /* 30.08梅16=188% */
+}
+}
+@media only screen and (min-width: 561px) {
+html {
+	font-size: 218%!important; /* 38.88梅16=218% */
+}
+}
+@media only screen and (min-width: 641px) {
+html {
+	font-size: 250%!important; /* 40梅16=250% */
+}
+}
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: "Microsoft YaHei"
+}
+body {
+	font-family: "Microsoft YaHei";
+	font-size: 0.7rem;
+	color: #333;
+	line-height: 0.7rem;
+	width: 100%;
+	background: #f2f2f2;
+}
+em {
+	font-style: normal
+}
+li {
+	list-style: none
+}
+a {
+	text-decoration: none;
+	outline: 0;
+	color: #333;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+
+
+.main {
+    width: 100%;
+    margin: 0.2rem auto;
+    background: #FFFFFF;
+}
+.main span {
+    line-height: 1.5rem;
+}
+.main-wrap{
+	padding: 0.1rem 0 0.1rem 0.5rem;
+}
+ .mydiv {
+    display: inline-block;
+}
+.main ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+.star_ul li {
+    margin-right: 0.3rem;
+    float: left;
+}
+.star_ul img {
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: text-bottom;
+}
+
+
+
+
+
