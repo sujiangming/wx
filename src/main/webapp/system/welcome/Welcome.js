@@ -1,6 +1,8 @@
 $(function(){
 	$(".content").css("height",$(window).height()+"px");
-	/*$.ajax({
+	/*
+	 * @注释了欢迎页接口部分代码
+	 * $.ajax({
         type: "post",
         url: getRootPath()+"mainframe/initWelcomeTopData",
         dataType: "json",
