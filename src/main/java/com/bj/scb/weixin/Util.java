@@ -39,10 +39,10 @@ public class Util {
 
 	public static final String TOKEN = "22_B5Q2P4JEEdKF8gZkc_AXD3oe60UDLmDwPFy4JUw0UJiZ7SRVPrhwc3LP3rK5gwvYNorxN0vP7xCqRl1okPqjxPMURJgsH4RWaX0SXdV9h8aA41VrEYFYQbk4gcgyjHFbaMr90Dko6dJ-eLnpFYHfAHAATC";
 	private static final String GET_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
-	public static final String APPID = "wx5f5fe40470be5d0b";//测试账号 "wx87bdcdb38c818077"
-	public static final String APPSECRET = "708934964f2369b6a76fe896e3985789";//"58f48c12064de09bc1012740f00366c5";
+	public static final String APPID = "wx5f5fe40470be5d0b";//测试账号
+	public static final String APPSECRET = "708934964f2369b6a76fe896e3985789";//测试账号
 	public static final String MCH_NO = "1435583802";
-	public static final String KEY = "qWWKwJDiQMqakBXYeAadae6DrRWUp79i";//商户支付密钥Key。审核通过后，在微信发送的邮件中查看，需改
+	public static final String KEY = "qWWKwJDiQMqakBXYeAadae6DrRWUp79i";//审核通过后，在微信发送的邮件中查看，正式环境需要修改
 	public static final String DOMAIN = "www.kjscb.com";//"subenjiang.ngrok.xiaomiqiu.cn" ;
 	public static Menu menu = new Menu();
 	public static final String UPLOAD_URL = "https://www.kjscb.com/imgdept/";
