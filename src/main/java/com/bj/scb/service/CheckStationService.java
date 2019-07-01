@@ -8,7 +8,7 @@ import com.bj.scb.utils.PageList;
 
 public interface CheckStationService {
 	
-	List<CheckStation> getStationList();
+	List<CheckStation> getStationListByType(String type);
 
 	PageList<CheckStation> selectlist(Map<String, Object> parameter);
 

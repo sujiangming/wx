@@ -19,8 +19,8 @@ import com.bj.scb.utils.PageList;
 @Repository
 public class CheckStationDaoImpl extends BaseDaoImpl {
 
-	public List<CheckStation> getStationList() {
-		return this.findList("from " + CheckStation.class.getName());
+	public List<CheckStation> getStationListByType(String type) {
+		return this.findList("from " + CheckStation.class.getName() + " where type='" + type + "'" );
 	}
 
 	public PageList<CheckStation> selectlist(Map<String, Object> parameter) {

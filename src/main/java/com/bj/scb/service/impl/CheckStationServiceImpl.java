@@ -24,8 +24,8 @@ public class CheckStationServiceImpl implements CheckStationService {
 	@Resource
 	CheckStationDaoImpl checkStationDaoImpl;
 
-	public List<CheckStation> getStationList() {
-		return checkStationDaoImpl.getStationList();
+	public List<CheckStation> getStationListByType(String type) {
+		return checkStationDaoImpl.getStationListByType(type);
 	}
 
 	@Override

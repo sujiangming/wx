@@ -17,7 +17,7 @@
 <!-- <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" /> -->
 <script type="text/javascript"
 	src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
-<!-- 高德地图样式及插件 end -->	
+<!-- 高德地图样式及插件 end -->
 <script src="${ContextPath}/UI-lib/plugins/fileinput/fileinput.min.js"
 	type="text/javascript"></script>
 <script src="${ContextPath}/pages/checkStation/checkStation.js"
@@ -105,7 +105,6 @@
 						<form id="myForm1" class="form-horizontal" role="form">
 							<fieldset id="customerInfo">
 								<legend style="font-size: 15px; border: 0;"></legend>
-
 								<div class="form-group form-group-sm ">
 									<label class="col-sm-2 control-label"><span
 										style="color: red; position: relative; top: 2px;">*</span>
@@ -126,11 +125,21 @@
 								</div>
 								<div class="form-group form-group-sm ">
 									<label class="col-sm-2 control-label"><span
+										style="color: red; position: relative; top: 2px;">*</span>站点类型</label>
+									<div class="col-sm-6">
+										<select id="stationType" width=100% onchange="selectChange(this)">
+											<option value="检车站点" selected="selected">检车站点</option>
+											<option value="救援站点">救援站点</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group form-group-sm ">
+									<label class="col-sm-2 control-label"><span
 										style="color: red; position: relative; top: 2px;">*</span>
 										站点经度</label>
 									<div class="col-sm-6">
 										<input class="form-control validate[required]"
-											id="checkStationX" type="text" placeholder="点击地图获取经纬度"/>
+											id="checkStationX" type="text" placeholder="点击地图获取经纬度" />
 									</div>
 								</div>
 								<div class="form-group form-group-sm ">
@@ -139,14 +148,15 @@
 										站点纬度</label>
 									<div class="col-sm-6">
 										<input class="form-control validate[required]"
-											id="checkStationY" type="text" placeholder="点击地图获取经纬度"/>
+											id="checkStationY" type="text" placeholder="点击地图获取经纬度" />
 									</div>
 								</div>
 								<br>
 							</fieldset>
 						</form>
 					</div>
-					<div style="width: 100%; height: 280px; background: #FDFBF3;position: relative;">
+					<div
+						style="width: 100%; height: 280px; background: #FDFBF3; position: relative;">
 						<div id="container" class="map"></div>
 					</div>
 
@@ -165,12 +175,12 @@
 	<script type="text/javascript"
 		src="https://webapi.amap.com/maps?v=1.4.11&key=8cf316f903f4807def2226d9b323db0a"></script>
 	<script type="text/javascript">
-		
 		//地图获取所点击的地址的坐标
 		var map = new AMap.Map("container", {
 			resizeEnable : true,
-			center : [105.303795, 27.29951],
-			zoom: 12 //初始地图级别
+			center : [ 105.303795, 27.29951 ],
+			zoom : 12
+		//初始地图级别
 		});
 		//为地图注册click事件获取鼠标点击出的经纬度坐标
 		map.on('click', function(e) {

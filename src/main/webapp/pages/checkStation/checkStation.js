@@ -86,6 +86,10 @@ var TableInit = function (){
                 field: 'checkStationName',
                 title: '站点名称'
             }, {
+            	field: 'type',
+				align: 'left',
+            	title: '站点类型',
+            }, {
             	field: 'checkStationAddress',
 				align: 'left',
             	title: '站点地址',
@@ -222,7 +226,8 @@ function getDataForm(){
 		checkStationName:$("#checkStationName").val(),
 		checkStationAddress:$("#checkStationAddress").val(),
 		checkStationX:$("#checkStationX").val(),
-		checkStationY:$("#checkStationY").val()
+		checkStationY:$("#checkStationY").val(),
+		stationType : $("#stationType").val()
 	};
 	return addJson;
 }
@@ -234,6 +239,14 @@ function clearForm(){
 	$("#checkStationX").val("");
 	$("#checkStationY").val("");
 	$("#id").val("");
+
+	$('#btEmpAdd').show();
+	$("#myModalTitle").html("新增");
+	$("#checkStationName").attr("disabled",false);
+	$("#checkStationAddress").attr("disabled",false);
+	$("#checkStationX").attr("disabled",false);
+	$("#checkStationY").attr("disabled",false);
+	$("#stationType").attr("disabled",false);
 }
     
 //查看和编辑
@@ -246,6 +259,7 @@ function editOrCheck(obj,type){
    		$("#checkStationAddress").attr("disabled",true);
    		$("#checkStationX").attr("disabled",true);
    		$("#checkStationY").attr("disabled",true);
+   		$("#stationType").attr("disabled",true);
 	}else{
 		$('#btEmpAdd').show();
 		$("#myModalTitle").html("编辑");
@@ -253,12 +267,14 @@ function editOrCheck(obj,type){
    		$("#checkStationAddress").attr("disabled",false);
    		$("#checkStationX").attr("disabled",false);
    		$("#checkStationY").attr("disabled",false);
+   		$("#stationType").attr("disabled",false);
 	}
 	$("#id").val(obj.id);
 	$("#checkStationName").val(obj.checkStationName);
 	$("#checkStationAddress").val(obj.checkStationAddress);
 	$("#checkStationX").val(obj.checkStationX);
 	$("#checkStationY").val(obj.checkStationY);
+	$("#stationType").val(obj.type);
 	
 	$('#myModal1').modal({backdrop: 'static', keyboard: false});
 }

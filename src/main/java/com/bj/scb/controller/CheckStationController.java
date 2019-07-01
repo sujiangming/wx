@@ -32,7 +32,7 @@ public class CheckStationController {
 	@RequestMapping(value = "list", produces = "application/json; charset=utf-8")
 	public @ResponseBody String getStationList(HttpServletRequest request, HttpServletResponse response,
 			HttpSession httpSession, @RequestParam Map<String, String> paramter) {
-		List<CheckStation> list = checkStationService.getStationList();
+		List<CheckStation> list = checkStationService.getStationListByType("检车站点");
 		JSONObject jsonObject=new JSONObject();
 		if (list==null||list.size()==0) {
 			jsonObject.put("status", 0);
@@ -81,6 +81,7 @@ public class CheckStationController {
 		String checkStationAddress= null == arg0.getParameter("checkStationAddress")?"":arg0.getParameter("checkStationAddress").toString();
 		String checkSX= null == arg0.getParameter("checkStationX")?"":arg0.getParameter("checkStationX").toString();
 		String checkSY= null == arg0.getParameter("checkStationY")?"":arg0.getParameter("checkStationY").toString();
+		String stationType = null == arg0.getParameter("stationType")?"":arg0.getParameter("stationType").toString();
 		double checkStationX=Double.parseDouble(checkSX);
 		double checkStationY=Double.parseDouble(checkSY);
 		Map<String,Object> result = new HashMap<String,Object>();
@@ -92,6 +93,7 @@ public class CheckStationController {
 		checkStation.setCheckStationName(checkStationName);
 		checkStation.setCheckStationX(checkStationX);
 		checkStation.setCheckStationY(checkStationY);
+		checkStation.setType(stationType);
 		try{
 			checkStationService.saveCheckStation(checkStation);
 			result.put("status", "1");

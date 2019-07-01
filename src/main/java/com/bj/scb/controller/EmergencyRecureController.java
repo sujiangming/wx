@@ -41,7 +41,7 @@ public class EmergencyRecureController {
 			HttpSession session) {
 		response.setHeader("Access-Control-Allow-Origin", "*");// 解决跨域问题
 		JSONObject json = new JSONObject();
-		List<CheckStation> list = checkStationService.getStationList();
+		List<CheckStation> list = checkStationService.getStationListByType("救援站点");
 		if (null == list || list.size() == 0) {
 			json.put("status", 0);
 			json.put("message", "没有查到检车站数据，请重试~");
